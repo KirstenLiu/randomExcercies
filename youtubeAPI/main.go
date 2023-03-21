@@ -21,7 +21,7 @@ var (
         maxResults = flag.Int64("max-results", 50, "Max YouTube results")
 )
 
-const developerKey = "AIzaSyAfM5NAfgO44t3Iq-Glp02n03JRNObo83s" //YOUR DEVELOPER KEY
+const developerKey = "" //YOUR DEVELOPER KEY
 
 //use curl call directly
 func main(){

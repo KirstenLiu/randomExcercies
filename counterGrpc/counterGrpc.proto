@@ -1,0 +1,12 @@
+syntax = "proto3";
+package CounterGrpc;
+
+service CounterQueue{
+	//for requesting counter
+	rpc RequestCounter(counterGrpc) returns (counterGrpc){}
+}
+
+message counterGrpc {
+	string token = 1;
+	int32 count = 2;
+}

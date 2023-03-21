@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Choose Your Own Advanture</title>
+    </head>
+    <body>
+        <section class="page">
+            <h1>
+                {{.Title}}
+            </h1>
+            {{range .Story}}
+                <p>{{.}}</p>
+            {{end}}
+
+            {{if .Options}}
+                <ul>
+                    {{range .Options}}
+                        <li>
+                            <a href="/{{.Arc}}">{{.Text}} </a>
+                        </li>
+                    {{end}}
+                
+                </ul>
+            {{else}}
+                <h3>~The End~</h3>
+            {{end}}
+        </section>
+        <style>
+            body {
+                font-family: Helvetica, Arial;
+            }
+            h1 {
+                text-align: center;
+                position: relative;
+            }
+            .page {
+                width: 80%;
+                max-width: 500px;
+                
+                margin: auto;
+                margin-top: 40px;
+                margin-bottom: 40px;
+
+                padding: 40px;
+                background-color:honeydew;
+                border: 1px solid;
+                box-shadow: 0 10px 6px -6px;
+            }
+            ul {
+                border-top: 6px, dotted, cyan;
+                padding: 20px 0 0 0;
+                -webkit-padding-start: 0;
+            }
+            li {
+                padding-top: 10px;
+            }
+            a,
+            a:visited {
+                text-decoration: wavy;
+                color: cornflowerblue; 
+            }
+            a:active,
+            a:hover{
+                color: darksalmon;
+            }
+            p{
+                text-indent: 1em;
+            }
+            
+        </style>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Choose Your Own Advanture</title>
+    </head>
+    <body>
+        <section class="page">
+            <h1>
+                {{.Title}}
+            </h1>
+            {{range .Story}}
+                <p>{{.}}</p>
+            {{end}}
+
+            {{if .Options}}
+                <ul>
+                    {{range .Options}}
+                        <li>
+                            <a href="/{{.Arc}}">{{.Text}} </a>
+                        </li>
+                    {{end}}
+                
+                </ul>
+            {{else}}
+                <h3>~The End~</h3>
+            {{end}}
+        </section>
+    </body>
+</html>
